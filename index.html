@@ -20,7 +20,7 @@
                 function call(){
                 $.ajax({
                     type:'GET',
-                    url: 'https://cecsblrhub-orasenatdhubsred01.cec.ocp.oraclecloud.com/documents/api/1.2/folders/FE4A0CC75833514215AE2CE3576669398F51103C59F6',
+                    url: 'http://dummy.restapiexample.com/api/v1/employees',
                     dataType: 'json',
                     headers: {
                         "Authorization": "Basic YXBpLnVzZXI6UXdlcnR5MTIzNDU2N0A=",
@@ -28,6 +28,8 @@
                     },
                     success: function(data){
                         console.log(data)
+                        document.getElementById("content").innerHTML = JSON.stringify(data);
+
                     }
                   })
                 };
@@ -36,5 +38,10 @@
 
     <body>
         <h1><button type="button" class="btn btn-outline-success" onclick="call()">Click</button></h1>
+        <div>
+                <p class="lead" id="content">
+                        
+                      </p>
+        </div>
     </body>
 </html>
