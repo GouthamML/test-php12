@@ -19,13 +19,15 @@
         function call() {
             $.ajax({
                 type: 'GET',
-                url: 'https://cecsblrhub-orasenatdhubsred01.cec.ocp.oraclecloud.com/content/management/api/v1.1/languageCodes',
-                dataType: 'json',
+                url: 'https://cecsblrhub-orasenatdhubsred01.cec.ocp.oraclecloud.com/content/management/api/v1.1/languageCodes?callback=?"',
+                dataType: 'jsonp',
+                contentType: "application/json",
                 headers: {
                     "Authorization": "Basic YXBpLnVzZXI6UXdlcnR5MTIzNDU2N0A=",
                     "Access-Control-Allow-Origin": "*"
                 },
                 success: function (data) {
+                    console.log("success from callback\n");
                     console.log(data)
                     document.getElementById("content").innerHTML = JSON.stringify(data);
 
