@@ -31,6 +31,9 @@
                     console.log(data)
                     document.getElementById("content").innerHTML = JSON.stringify(data);
 
+                },
+                error: function (e, r, h) {
+                    alert(h.message);
                 }
             })
         };
