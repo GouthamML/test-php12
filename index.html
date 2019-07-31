@@ -19,8 +19,8 @@
         function call() {
             $.ajax({
                 type: 'GET',
-                url: 'https://cecsblrhub-orasenatdhubsred01.cec.ocp.oraclecloud.com/content/management/api/v1.1/languageCodes',
-                dataType: 'json',
+                url: 'https://cecsblrhub-orasenatdhubsred01.cec.ocp.oraclecloud.com/content/management/api/v1.1/languageCodes?callback=?"',
+                dataType: 'jsonp',
                 contentType: "application/json",
                 headers: {
                     "Authorization": "Basic YXBpLnVzZXI6UXdlcnR5MTIzNDU2N0A=",
