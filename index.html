@@ -20,20 +20,20 @@
             $.ajax({
                 type: 'GET',
                 url: 'https://cecsblrhub-orasenatdhubsred01.cec.ocp.oraclecloud.com/content/management/api/v1.1/languageCodes',
-                dataType: 'jsonp',
-                jsonp : 'callback',
+                dataType: 'json',
+                //jsonp : 'callback',
                 contentType: "application/json",
-                jsonpCallback: 'jsonpcallback',
+                //jsonpCallback: 'jsonpcallback',
                 headers: {
                     "Authorization": "Basic " + btoa("api.user:Qwerty1234567@"),
-                    "Access-Control-Allow-Origin": "*"
+                    "Access-Control-Allow-Origin": "http://test-php12.herokuapp.com"
                 },
-                /*success: function (data) {
+                success: function (data) {
                     console.log("success from callback\n");
                     console.log(data)
                     document.getElementById("content").innerHTML = JSON.stringify(data);
 
-                },*/
+                },
                 error: function (e, r, h) {
                     alert(h.message);
                 }
